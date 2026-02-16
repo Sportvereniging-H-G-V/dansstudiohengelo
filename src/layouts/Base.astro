@@ -1,0 +1,24 @@
+---
+import "../styles/global.css";
+const { title = "Dansstudio Hengelo", description = "Dansstudio in de sportkantine van Sportvereniging H.G.V. in Hengelo." } = Astro.props;
+---
+
+<html lang="nl" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    
+    <!-- DNS prefetch for Google Maps (lazy loaded) -->
+    <link rel="dns-prefetch" href="https://maps.googleapis.com" />
+    
+    <!-- Performance hints -->
+    <meta name="theme-color" content="#0284c7" />
+  </head>
+  <body class="min-h-screen bg-white text-slate-900">
+    <slot />
+  </body>
+</html>
+

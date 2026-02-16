@@ -1,0 +1,9 @@
+name = "dansstudiohengelo"
+account_id = "YOUR_CF_ACCOUNT_ID"          # Zet in CI als env of vul hier; CI kan --project-name gebruiken
+main = ""                                  # Niet nodig voor Pages (we deployen 'dist')
+
+[env.production]
+vars = { PUBLIC_SITE_URL = "https://dansstudiohengelo.nl" }
+
+
+

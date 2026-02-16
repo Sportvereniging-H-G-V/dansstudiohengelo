@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "title": "Dansstudio Hengelo",
+    "subtitle": "Een sfeervolle plek voor dans & ontmoeting — in de sportkantine van Sportvereniging H.G.V.",
+    "image": "/img/hero.jpg",
+    "cta": { "label": "Meer over H.G.V.", "href": "https://hgvhengelo.nl" }
+  },
+  "about": {
+    "title": "Over de dansstudio & sportkantine",
+    "body": "Onze dansstudio is onderdeel van de sportkantine van Sportvereniging H.G.V. — een centrale plek waar leden, ouders en bezoekers samenkomen. De ruimte is licht, flexibel inzetbaar en perfect voor kleinschalige dansactiviteiten en clubbijeenkomsten.\n\nZoek je informatie over lessen, het sportaanbod of activiteiten? Bezoek de website van Sportvereniging H.G.V."
+  },
+  "gallery": {
+    "title": "Sfeerimpressie",
+    "items": [
+      { "src": "/img/gallery-1.jpg", "alt": "Uitzicht op de zaal vanaf de zithoek" },
+      { "src": "/img/gallery-2.jpg", "alt": "Dansvloer/ruimte in de kantine" },
+      { "src": "/img/gallery-3.jpg", "alt": "Bar en zitplekken in de kantine" }
+    ]
+  },
+  "contact": {
+    "title": "Contact",
+    "intro": "Vragen of wil je langskomen? Neem gerust contact op met Sportvereniging H.G.V.",
+    "note": "Voor lesroosters, inschrijvingen en actuele informatie: bezoek hgvhengelo.nl.",
+    "map": {
+      "title": "Route",
+      "address": "Sloetsweg 153, 7556 HL Hengelo (OV)",
+      "googleMapsEmbed": "https://www.google.com/maps?q=Sportvereniging+H.G.V.,+Hengelo&output=embed",
+      "googleMapsLink": "https://maps.google.com/?q=Sportvereniging+H.G.V.,+Hengelo",
+      "parking": {
+        "name": "Parkeerplaats OSG/Avila/HGV",
+        "address": "Deurningerstraat 67, 7557 HB Hengelo",
+        "googleMapsLink": "https://maps.google.com/?q=Deurningerstraat+67,+7557+HB+Hengelo"
+      }
+    }
+  }
+}
+

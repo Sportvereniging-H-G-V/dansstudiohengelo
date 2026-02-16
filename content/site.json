@@ -1,0 +1,13 @@
+{
+  "brand": "Dansstudio Hengelo",
+  "tagline": "In de sportkantine van Sportvereniging H.G.V.",
+  "contact": {
+    "email": "sportkantine@hgvhengelo.nl",
+    "phone": "06-43118346",
+    "address": "Sloetsweg 153, 7556 HL Hengelo (OV)"
+  },
+  "links": [
+    { "label": "Sportvereniging H.G.V.", "href": "https://hgvhengelo.nl" }
+  ]
+}
+

@@ -1,0 +1,25 @@
+---
+import OptimizedImage from "./OptimizedImage.astro";
+const { items = [] } = Astro.props;
+---
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+  {items.map((img:any) => (
+    <figure class="group overflow-hidden rounded-2xl border-2 border-primary-100 shadow-lg hover:shadow-2xl transition-all duration-300 hover:border-primary-300 relative">
+      <div class="absolute inset-0 bg-gradient-to-t from-primary-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"></div>
+      <OptimizedImage
+        src={img.src}
+        alt={img.alt || ""}
+        class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+        loading="lazy"
+        widths={[400, 600, 800]}
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        fetchpriority="low"
+      />
+      <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
+        <p class="text-white text-sm font-medium">{img.alt}</p>
+      </div>
+    </figure>
+  ))}
+</div>
+

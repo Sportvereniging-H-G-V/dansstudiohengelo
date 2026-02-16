@@ -1,0 +1,38 @@
+---
+---
+
+<button
+  id="back-to-top"
+  class="fixed bottom-8 right-8 z-50 p-4 bg-primary-600 text-white rounded-full shadow-lg hover:bg-primary-700 transition-all opacity-0 pointer-events-none transform translate-y-4"
+  aria-label="Terug naar boven"
+  title="Terug naar boven"
+>
+  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+  </svg>
+</button>
+
+<script>
+  (function() {
+    const button = document.getElementById('back-to-top');
+    if (!button) return;
+
+    function toggleButton() {
+      if (window.scrollY > 300) {
+        button.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+        button.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+      } else {
+        button.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+        button.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+      }
+    }
+
+    window.addEventListener('scroll', toggleButton, { passive: true });
+    toggleButton();
+
+    button.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  })();
+</script>
+

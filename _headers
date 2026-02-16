@@ -1,0 +1,28 @@
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+  Cache-Control: public, max-age=300, s-maxage=31536000
+
+# Static assets - lange cache
+/_astro/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Images - lange cache
+/img/**
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML - korte cache voor updates
+/*.html
+  Cache-Control: public, max-age=300, s-maxage=3600
+
+# CSS en JS
+/*.css
+  Cache-Control: public, max-age=31536000, immutable
+
+/*.js
+  Cache-Control: public, max-age=31536000, immutable
+
+
+

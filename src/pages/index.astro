@@ -1,0 +1,37 @@
+---
+import Base from "../layouts/Base.astro";
+import Footer from "../components/Footer.astro";
+import Hero from "../components/Hero.astro";
+import Section from "../components/Section.astro";
+import Gallery from "../components/Gallery.astro";
+import ContactCard from "../components/ContactCard.astro";
+import Map from "../components/Map.astro";
+import BackToTop from "../components/BackToTop.astro";
+import site from "../../content/site.json";
+import home from "../../content/home.json";
+---
+
+<Base title="Dansstudio Hengelo – Sportkantine H.G.V." description="Een sfeervolle plek voor dans & ontmoeting in de sportkantine van Sportvereniging H.G.V. in Hengelo.">
+  <main>
+    <Hero {...home.hero} />
+    <Section id="about" title={home.about.title} body={home.about.body} bgColor="bg-white" />
+    <Section id="gallery" title={home.gallery.title}>
+      <Gallery items={home.gallery.items} />
+    </Section>
+    <Section id="contact" title={home.contact.title} bgColor="bg-white">
+      <ContactCard intro={home.contact.intro} note={home.contact.note} />
+    </Section>
+    {home.contact.map && (
+      <Map
+        title={home.contact.map.title}
+        src={home.contact.map.googleMapsEmbed}
+        link={home.contact.map.googleMapsLink}
+        address={site.contact.address}
+        parking={home.contact.map.parking}
+      />
+    )}
+  </main>
+  <Footer />
+  <BackToTop />
+</Base>
+

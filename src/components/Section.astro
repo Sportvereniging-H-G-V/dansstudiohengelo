@@ -1,0 +1,24 @@
+---
+interface Props {
+  id?: string;
+  title?: string;
+  body?: string;
+  bgColor?: string;
+}
+
+const { id, title, body, bgColor = "bg-white" } = Astro.props;
+---
+
+<section id={id} class={`relative max-w-6xl mx-auto px-4 py-16 md:py-20 ${bgColor}`}>
+  {title && (
+    <div class="mb-8">
+      <h2 class="text-3xl md:text-4xl font-bold mb-3 text-slate-900 relative inline-block">
+        {title}
+        <span class="absolute -bottom-2 left-0 w-20 h-1 bg-gradient-to-r from-primary-500 to-primary-300 rounded-full"></span>
+      </h2>
+    </div>
+  )}
+  {body && <p class="text-lg text-slate-700 whitespace-pre-line leading-relaxed max-w-3xl">{body}</p>}
+  <slot />
+</section>
+
