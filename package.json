@@ -9,7 +9,7 @@
     "test": "vitest run"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4.1.17",
+    "@tailwindcss/postcss": "^4.1.18",
     "astro": "^5.15.9",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
